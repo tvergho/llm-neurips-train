@@ -34,5 +34,7 @@ RUN wget https://huggingface.co/mistralai/Mistral-7B-v0.1/resolve/main/special_t
 
 RUN mv /app/model/mistral-platypus-lima-3ep.bin /app/model/pytorch_model.bin
 
+RUN pip install pandas numpy tqdm
+
 # Use the start script as the entrypoint
 ENTRYPOINT ["/app/start.sh"]
