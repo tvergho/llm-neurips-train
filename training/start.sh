@@ -17,3 +17,4 @@ python scripts/convert_hf_checkpoint.py --checkpoint_dir ../model/Mistral-7B-v0.
 python finetune/lora.py --quantize bnb.nf4-dq --precision bf16-true
 
 python scripts/merge_lora.py --lora_path out/lora/lit_model_lora_finetuned.pth --checkpoint_dir ../model/Mistral-7B-v0.1 --out_dir out
+python scripts/convert_lit_checkpoint.py --checkpoint_path out/lit_model.pth --output_path out/pytorch_model.bin --config_path ../model/Mistral-7B-v0.1/lit_config.json
