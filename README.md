@@ -15,6 +15,8 @@ To start the server for the `neurips/local` model, build and run the Dockerfile 
 
 Evaluation can then be performed using [HELM](https://github.com/stanford-crfm/helm), specifying the `neurips/local` model. The `neurips/local` model is a finetuned `mistral-7b` model trained on a combination of the [LIMA](https://huggingface.co/datasets/GAIR/lima) and [Open-Platypus](https://huggingface.co/datasets/garage-bAInd/Open-Platypus) datasets.
 
+[DoLa](https://arxiv.org/pdf/2309.03883.pdf) was implemented as a decoding technique to boost the performance of the model on TruthfulQA.
+
 ## Training Reproduction
 
 All training-related code is in the `training` directory. Building and running the Dockerfile should start the training loop. After that completes, the model file should be output in the `training/lit-gpt/out` directory.
